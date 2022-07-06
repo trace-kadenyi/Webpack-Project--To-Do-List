@@ -5,6 +5,10 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
+    list:  './src/list.js',
+    display: './src/displaytasks.js',
+    delete: './src/deletetask.js',
+    edit: './src/edittask.js'
   },
   devtool: 'inline-source-map',
   devServer: {

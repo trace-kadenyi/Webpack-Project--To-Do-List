@@ -29,8 +29,13 @@ ul {
   display: flex;
   flex-direction: column;
 }
-
+.taskinput {
+  border: none;
+  width: 80%;
+  padding: 10px 0;
+}
 li {
+  list-style: none;
   margin: 10px 0;
   padding: 10px;
   border-bottom: 1px lightgray solid;
@@ -43,7 +48,10 @@ li:last-child {
 
 .fa-icon {
   position: absolute;
-  right: 10px;
+  right: 15px;
+}
+.deleted {
+  margin-top: 20px;
 }
 
 #add::placeholder {
@@ -73,3 +81,13 @@ li:last-child {
   justify-content: center;
   height: 50px;
 }
+.editdiv {
+  display: none;
+}
+.inputextedit {
+  padding: 10px 0;
+  border: none;
+  font-size: 1.2rem;
+  width: 80%;
+}
+
