@@ -1,8 +1,8 @@
 // Main container class - Array of Objects
-class myToDoList {
-    constructor() {
-        this.tasks = JSON.parse(window.localStorage.getItem('todotasks')) ? JSON.parse(window.localStorage.getItem('todotasks')) : [];
-    }
+class MyToDoList {
+  constructor() {
+    this.tasks = JSON.parse(localStorage.getItem('todotasks')) ? JSON.parse(localStorage.getItem('todotasks')) : [];
+  }
 }
 
-export default myToDoList;
+export default MyToDoList;

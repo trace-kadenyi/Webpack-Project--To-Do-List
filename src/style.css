@@ -29,29 +29,38 @@ ul {
   display: flex;
   flex-direction: column;
 }
-.taskinput {
+
+.inputtext {
   border: none;
-  width: 80%;
-  padding: 10px 0;
+  padding: 3px;
+  font-size: 1.2rem;
 }
+
 li {
   list-style: none;
   margin: 10px 0;
   padding: 10px;
   border-bottom: 1px lightgray solid;
   position: relative;
+  display: flex;
 }
 
-li:last-child {
-  margin-bottom: 0;
+button {
+  position: absolute;
+  right: 10px;
+  border: none;
+  padding: 9px;
 }
 
 .fa-icon {
   position: absolute;
-  right: 15px;
+  right: 10px;
+  border: none;
+  padding: 0 5px;
 }
-.deleted {
-  margin-top: 20px;
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 #add::placeholder {
@@ -65,7 +74,7 @@ li:last-child {
   border-bottom: 1px lightgray solid;
 }
 
-.checkbox {
+.checkboxitem {
   margin-right: 10px;
 }
 
@@ -81,9 +90,11 @@ li:last-child {
   justify-content: center;
   height: 50px;
 }
+
 .editdiv {
   display: none;
 }
+
 .inputextedit {
   padding: 10px 0;
   border: none;
@@ -91,3 +102,6 @@ li:last-child {
   width: 80%;
 }
 
+.taskdiv {
+  display: flex;
+}
