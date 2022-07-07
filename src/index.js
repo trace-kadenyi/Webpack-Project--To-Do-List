@@ -10,9 +10,5 @@ addListItem.addEventListener('change', () => {
 });
 // loop through the main array to create the task body dynamically
 for (let i = 0; i <= MyToDo.tasks.length; i += 1) {
-  MyToDo.tasks.forEach((task) => {
-    if (task.index === i) {
-      createTodoListComponents(task);
-    }
-  });
+  MyToDo.tasks.map((task) => (task.index === i ? createTodoListComponents(task) : ''));
 }

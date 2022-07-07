@@ -62,7 +62,7 @@ const createTodoListComponents = (todoListComponent, TaskID) => {
     if (e.key === 'Enter') {
     // make the current input text the actual input value
       inputText.placeholder = inputText.value;
-      ellipsis.style.display = 'flex';
+      ellipsis.style.display = 'block';
       deleteButton.style.display = 'none';
       inputText.removeAttribute('disabled');
       const ListTask = new OneTaskListItem();
