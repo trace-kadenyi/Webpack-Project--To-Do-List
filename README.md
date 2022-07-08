@@ -12,6 +12,7 @@
 ## Getting started
 
 - The project is set up using webpack. Therefore, to get started, add a package.json file to the project by passing this command to the terminal: ``npm init -y``. Thereafter, webpack must be installed. Follow [this link (Getting Started)](https://webpack.js.org/guides/getting-started/#basic-setup) for detailed instructions on how to set up webpack. 
+- Use this link to clone the project: https://github.com/TracK92/Webpack-Project--To-Do-List.git
 
 
 ## Authors
