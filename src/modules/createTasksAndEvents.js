@@ -57,6 +57,7 @@ const createTodoListComponents = (todoListComponent) => {
     const DeleteItem = new OneTaskListItem();
     DeleteItem.removeFromToDo(e.target.id);
   });
+  // check and uncheck items
   checkbox.addEventListener('change', (e) => {
     const foundIndex = MyToDo.tasks.findIndex(
       (task) => task.index === Number(e.target.id),
