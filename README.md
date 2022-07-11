@@ -7,7 +7,7 @@
 
 ## Built With
 
-- Major languages: HTML|CSS|JavaScript|Webpack
+- Major languages: HTML | CSS | JavaScript | Webpack
 
 ## Live Demo
 [Live Demo Link](https://track92.github.io/Webpack-Project--To-Do-List/)
