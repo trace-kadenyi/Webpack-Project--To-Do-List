@@ -30,6 +30,9 @@ class OneTaskListItem {
 
   // remove
   removeFromToDo(index) {
+    const MyToDo = new MyToDoList();
+    const listContainer = document.querySelector('.listContainer');
+
     MyToDo.tasks = MyToDo.tasks.filter((task) => task.index !== Number(index));
     // update local storage
     localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
@@ -43,6 +46,7 @@ class OneTaskListItem {
 
   // update Index
   updateToDoIndex = () => {
+    const MyToDo = new MyToDoList();
     // map through the array of objects
     MyToDo.tasks = MyToDo.tasks.map((node, index) => {
       // increase the index of each task by one after the deletion of an item
@@ -55,6 +59,7 @@ class OneTaskListItem {
 
   // display
   displayToDoList = () => {
+    const MyToDo = new MyToDoList();
     const listContainer = document.querySelector('.listContainer');
     listContainer.innerHTML = '';
     JSON.parse(localStorage.getItem('todotasks')).forEach((task, index) => {
@@ -64,6 +69,7 @@ class OneTaskListItem {
 
   // edit
   editItem = (id, inputValue) => {
+    const MyToDo = new MyToDoList();
     const foundIndex = MyToDo.tasks.findIndex(
       (task) => task.index === Number(id),
     );
