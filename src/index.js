@@ -14,8 +14,8 @@ const clearSelectedTasks = document.querySelector('.clear');
 clearSelectedTasks.addEventListener('click', () => {
   const MyToDo = new MyToDoList();
   const task = new OneTaskListItem();
-  MyToDo.tasks = MyToDo.tasks.filter((task) => task.completed === false);
-  localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
+  const myArray = task.clearTasks(MyToDo.tasks);
+  localStorage.setItem('todotasks', JSON.stringify(myArray));
   task.updateToDoIndex();
   task.displayToDoList();
 });
