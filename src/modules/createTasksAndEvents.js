@@ -23,6 +23,7 @@ const createTodoListComponents = (todoListComponent) => {
   // input
   const inputText = document.createElement('input');
   inputText.className = 'inputtext';
+  inputText.setAttribute('type', 'text');
   inputText.setAttribute('id', todoListComponent.index);
   inputText.setAttribute('value', todoListComponent.description);
   inputText.setAttribute('disabled', '');
