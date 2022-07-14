@@ -1,7 +1,8 @@
 import { OneTaskListItem, MyToDo } from './todoObjectClass.js';
 
-const listContainer = document.querySelector('.listContainer');
+// const listContainer = document.querySelector('.listContainer');
 const createTodoListComponents = (todoListComponent) => {
+  const listContainer = document.querySelector('.listContainer');
   const addInput = document.querySelector('#add');
   addInput.value = '';
   // create list element
