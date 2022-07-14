@@ -57,4 +57,40 @@ describe('Edit task', () => {
     const val = MyToDo.tasks[2].description;
     expect(val).toBe('Go Market');
   });
+
+  test('verify checked tasks', () => {
+    document.body.innerHTML = `
+<main class="main-todo">
+      <h3>Today's To Do <i class="fa-solid fa-arrows-rotate fa-icon"></i></h3>
+      <label for="add" class="add"></label>
+      <input 
+          name="add"
+          id="add"
+          placeholder="Add to your list.."
+      />
+      <ul class="listContainer"></ul>
+      <div class="clearlist">
+          <p class="clear">Clear all completed</p>
+      </div>
+      
+  </main>`;
+    // const checkbox = document.querySelectorAll('.checkboxitem');
+      const MyTodo = new MyToDoList();
+      // const firstTask = document.querySelectorAll('.listContainer li input[type=text]')[0];
+      expect(newItem.checkTasks(MyTodo.tasks[0], true)).toBe(true);
+  });
+
 });
+
+describe("clear completed tasks", () => {
+  test('clear all completed', () => {
+    let myArray = [
+      { index : 1, description: "Watch a movie", completed: false },
+      { index : 2, description: "Wash my clothes", completed: false },
+      { index : 3, description: "Visit a friend", completed: true}
+  ]
+  myArray = myArray.filter((task) => task.completed === false);
+    
+  expect(myArray).toHaveLength(2);
+  })
+})

@@ -67,6 +67,25 @@ class OneTaskListItem {
     });
   };
 
+    // check
+    checkTasks = (id, done) => {
+      const MyToDo = new MyToDoList();
+      const foundIndex = MyToDo.tasks.findIndex(
+        (task) => task.index === Number(id),
+      );
+      MyToDo.tasks[foundIndex] = {
+        ...MyToDo.tasks[foundIndex], 
+        completed: done,
+      };
+      // save changes to local storage
+      localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
+      if(done === MyToDo.tasks[foundIndex].completed) {
+        return true;
+      } else {
+        return false
+      }
+    }
+
   // edit
   editItem = (id, inputValue) => {
     const MyToDo = new MyToDoList();

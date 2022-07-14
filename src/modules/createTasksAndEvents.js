@@ -59,17 +59,12 @@ const createTodoListComponents = (todoListComponent) => {
     const DeleteItem = new OneTaskListItem();
     DeleteItem.removeFromToDo(e.target.id);
   });
+  // check items
   checkbox.addEventListener('change', (e) => {
-    const MyToDo = new MyToDoList();
-    const foundIndex = MyToDo.tasks.findIndex(
-      (task) => task.index === Number(e.target.id),
-    );
-    MyToDo.tasks[foundIndex] = {
-      ...MyToDo.tasks[foundIndex], completed: e.target.checked,
-    };
-    // save changes to local storage
-    localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
+    const checkedTasks = new OneTaskListItem();
+    checkedTasks.checkTasks(e.target.id, e.target.checked);
   });
+
   // edit text Item
   inputText.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
