@@ -53,10 +53,8 @@ class OneTaskListItem {
       node.index = index + 1;
       return node;
     });
-    console.log("before saving", MyToDo.tasks);
     // save changes to local storage
     localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
-    console.log("After saving: ", MyToDo);
   };
 
   // display

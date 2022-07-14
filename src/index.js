@@ -1,4 +1,3 @@
-// import { MyToDo, OneTaskListItem } from './modules/todoObjectClass.js';
 import { OneTaskListItem } from './modules/todoObjectClass.js';
 import MyToDoList from './modules/mainContainerClass.js';
 

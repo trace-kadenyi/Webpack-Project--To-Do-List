@@ -1,9 +1,6 @@
-// import { OneTaskListItem, MyToDo } from './todoObjectClass.js';
 import { OneTaskListItem } from './todoObjectClass.js';
 import MyToDoList from './mainContainerClass.js';
 
-
-// const listContainer = document.querySelector('.listContainer');
 const createTodoListComponents = (todoListComponent) => {
   const listContainer = document.querySelector('.listContainer');
   const addInput = document.querySelector('#add');
