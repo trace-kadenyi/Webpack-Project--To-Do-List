@@ -5,7 +5,6 @@
 import { OneTaskListItem } from '../modules/todoObjectClass.js';
 import MyToDoList from '../modules/mainContainerClass.js';
 
-
 const mainArr = [];
 const newItem = new OneTaskListItem(1, 'description', false);
 
@@ -26,15 +25,6 @@ describe('add and remove tasks', () => {
   });
 
   test('add two task', () => {
-    // document.body.innerHTML = `
-    //         <label for="add" class="add"></label>
-    //         <input 
-    //             name="add"
-    //             id="add"
-    //             placeholder="Add to your list.."
-    //         />
-    //         <ul class="listContainer"></ul>`;
-
     newItem.addNewToDo(mainArr, 'Swimming lesson');
     newItem.addNewToDo(mainArr, 'Practice Unit Testing');
     const listContainer = document.querySelectorAll('.listContainer li');
@@ -51,8 +41,8 @@ describe('add and remove tasks', () => {
 describe('Edit task', () => {
   test('edit task', () => {
     // localStorage.clear();
-    newItem.addNewToDo(mainArr, 'Go Mall');   
-    newItem.editItem(3, "Go Market");    
+    newItem.addNewToDo(mainArr, 'Go Mall');
+    newItem.editItem(3, 'Go Market');
     const MyToDo = new MyToDoList();
     const val = MyToDo.tasks[2].description;
     expect(val).toBe('Go Market');
@@ -74,23 +64,20 @@ describe('Edit task', () => {
       </div>
       
   </main>`;
-    // const checkbox = document.querySelectorAll('.checkboxitem');
-      const MyTodo = new MyToDoList();
-      // const firstTask = document.querySelectorAll('.listContainer li input[type=text]')[0];
-      expect(newItem.checkTasks(MyTodo.tasks[0], true)).toBe(true);
+    const MyTodo = new MyToDoList();
+    expect(newItem.checkTasks(MyTodo.tasks[0], true)).toBe(true);
   });
-
 });
 
-describe("clear completed tasks", () => {
+describe('clear completed tasks', () => {
   test('clear all completed', () => {
     let myArray = [
-      { index : 1, description: "Watch a movie", completed: false },
-      { index : 2, description: "Wash my clothes", completed: false },
-      { index : 3, description: "Visit a friend", completed: true}
-  ]
-  myArray = myArray.filter((task) => task.completed === false);
-    
-  expect(myArray).toHaveLength(2);
-  })
-})
+      { index: 1, description: 'Watch a movie', completed: false },
+      { index: 2, description: 'Wash my clothes', completed: false },
+      { index: 3, description: 'Visit a friend', completed: true },
+    ];
+    myArray = myArray.filter((task) => task.completed === false);
+
+    expect(myArray).toHaveLength(2);
+  });
+});
