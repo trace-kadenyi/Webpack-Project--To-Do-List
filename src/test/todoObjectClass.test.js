@@ -40,7 +40,6 @@ describe('add and remove tasks', () => {
 
 describe('Edit task', () => {
   test('edit task', () => {
-    // localStorage.clear();
     newItem.addNewToDo(mainArr, 'Go Mall');
     newItem.editItem(3, 'Go Market');
     const MyToDo = new MyToDoList();
@@ -71,13 +70,12 @@ describe('Edit task', () => {
 
 describe('clear completed tasks', () => {
   test('clear all completed', () => {
-    let myArray = [
+    const clearItems = new OneTaskListItem();
+    const myArray = [
       { index: 1, description: 'Watch a movie', completed: false },
       { index: 2, description: 'Wash my clothes', completed: false },
       { index: 3, description: 'Visit a friend', completed: true },
     ];
-    myArray = myArray.filter((task) => task.completed === false);
-
-    expect(myArray).toHaveLength(2);
+    expect(clearItems.clearTasks(myArray)).toHaveLength(2);
   });
 });

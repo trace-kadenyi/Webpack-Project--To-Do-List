@@ -98,5 +98,11 @@ class OneTaskListItem {
     // save changes to local storage
     localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
   };
+
+  // clear tasks
+  clearTasks = (myArray) => {
+    myArray = myArray.filter((task) => task.completed === false);
+    return myArray;
+  }
 }
 export { MyToDo, OneTaskListItem };
