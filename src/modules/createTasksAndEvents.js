@@ -1,4 +1,7 @@
-import { OneTaskListItem, MyToDo } from './todoObjectClass.js';
+// import { OneTaskListItem, MyToDo } from './todoObjectClass.js';
+import { OneTaskListItem } from './todoObjectClass.js';
+import MyToDoList from './mainContainerClass.js';
+
 
 // const listContainer = document.querySelector('.listContainer');
 const createTodoListComponents = (todoListComponent) => {
@@ -59,6 +62,7 @@ const createTodoListComponents = (todoListComponent) => {
     DeleteItem.removeFromToDo(e.target.id);
   });
   checkbox.addEventListener('change', (e) => {
+    const MyToDo = new MyToDoList();
     const foundIndex = MyToDo.tasks.findIndex(
       (task) => task.index === Number(e.target.id),
     );

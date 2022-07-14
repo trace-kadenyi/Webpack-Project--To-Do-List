@@ -3,14 +3,11 @@
  */
 
 import { OneTaskListItem } from "../modules/todoObjectClass.js";
-// import mockStore from "../__mocks__/mockLocalStore.js";
 
 const mainArr = [];
-
-// window.localStorage = mockStore;
 const newItem = new OneTaskListItem(1, 'description', false);
 
-describe('add tasks', () => {
+describe('add and remove tasks', () => {
     test('add one task', () => {
         document.body.innerHTML = `
             <label for="add" class="add"></label>
@@ -42,14 +39,9 @@ describe('add tasks', () => {
         expect(listContainer).toHaveLength(2);
     });
 
-    // test('add task two', () => {
-    //     newItem.addNewToDo('walk the dog');
-    //     const taskContainer = document.querySelectorAll('.listContainer li');
-    //     expect(taskContainer).toHaveLength(2);
-    // });
-    // test('add task three', () => {
-    //     newItem.addNewToDo('study');
-    //     const taskContainer = document.querySelectorAll('.listContainer li');
-    //     expect(taskContainer).toHaveLength(3);
-    // });
-})
+    test('Remove one task', () => {
+        newItem.removeFromToDo(1);
+        const listContainer = document.querySelectorAll('.listContainer li');
+        expect(listContainer).toHaveLength(2);
+    });
+});
