@@ -3,9 +3,15 @@
   padding: 0;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
-  background-color: rgb(249, 252, 253);
   font-family: sans-serif;
+  background: url(./pumpkin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
@@ -14,7 +20,6 @@ main {
   display: flex;
   flex-direction: column;
   margin: 50px auto;
-  background-color: white;
 }
 
 h3 {
@@ -22,6 +27,7 @@ h3 {
   margin: 20px 5px;
   padding: 5px;
   border-bottom: 1px lightgray solid;
+  color: aliceblue;
 }
 
 ul {
@@ -34,7 +40,8 @@ ul {
   border: none;
   padding: 3px;
   font-size: 1.2rem;
-  min-width: 100%;
+  min-width: 90%;
+  background-color: rgb(205, 225, 218);
 }
 
 li {
@@ -50,7 +57,8 @@ button {
   position: absolute;
   right: 10px;
   border: none;
-  padding: 9px;
+  padding-top: 9px;
+  cursor: pointer;
 }
 
 .fa-icon {
@@ -58,6 +66,10 @@ button {
   right: 10px;
   border: none;
   padding: 0 5px;
+}
+
+.fa-arrows-rotate {
+  color: aliceblue;
 }
 
 li:last-child {
@@ -72,7 +84,12 @@ li:last-child {
   padding: 10px;
   margin-bottom: 20px;
   border: none;
+  background-color: aliceblue;
   border-bottom: 1px lightgray solid;
+}
+
+#add:focus {
+  outline: none;
 }
 
 .checkboxitem {
@@ -81,12 +98,12 @@ li:last-child {
 
 .clear {
   text-align: center;
-  color: gray;
   cursor: pointer;
+  color: aliceblue;
 }
 
 .clearlist {
-  background-color: aliceblue;
+  background-color: rgb(40, 83, 120);
   display: flex;
   align-items: center;
   justify-content: center;

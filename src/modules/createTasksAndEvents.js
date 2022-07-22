@@ -33,11 +33,13 @@ const createTodoListComponents = (todoListComponent) => {
   ellipsis.setAttribute('type', 'button');
   ellipsis.classList.add('editButton');
   ellipsis.classList.add(todoListComponent.index);
+  ellipsis.style.color = 'aliceblue';
   ellipsis.innerHTML = '<i class="fa-solid fa-ellipsis-vertical fa-icon fa-lg"></i>';
   oneTask.appendChild(ellipsis);
   // delete button
   const deleteButton = document.createElement('button');
   deleteButton.classList.add('deleteButton');
+  deleteButton.style.color = 'red';
   deleteButton.classList.add(todoListComponent.index);
   deleteButton.setAttribute('type', 'button');
   deleteButton.setAttribute('id', todoListComponent.index);
@@ -53,6 +55,8 @@ const createTodoListComponents = (todoListComponent) => {
     inputText.focus();
     ellipsis.style.display = 'none';
     siblingDeleteBtn.style.display = 'block';
+    inputText.style.backgroundColor = 'white';
+    inputText.style.outline = 'none';
   });
   // delete from to do list
   deleteButton.addEventListener('click', (e) => {
@@ -77,6 +81,7 @@ const createTodoListComponents = (todoListComponent) => {
       ListTask.editItem(inputText.id, inputText.value);
       // set input field back to disabled
       inputText.setAttribute('disabled', '');
+      inputText.style.backgroundColor = 'aliceblue';
     }
   });
 };
